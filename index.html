@@ -132,13 +132,13 @@
     const messageContainer = document.querySelector(".container");
 
    // getting the audio from images folder served as static to the server
-    var audio = new Audio('/images/ting.mp3');
+    var audio = new Audio('masg-tone.mp3');
     //listening to the form submission
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         const message = messageInput.value;
         //Displaying the user's own message
-        append(`You:${message}`, 'right');
+        append(`You : ${message}`, 'right');
         //Sending the message to index.js socket server
         socket.emit('send', message);
         //making the input text null after clicking submit button
@@ -167,7 +167,7 @@
     });
    //Receiving the name along with message sent by any user
     socket.on('receive', data => {
-        append(`${data.name}:${data.message}`, 'left');
+        append(`${data.name }: ${ data.message}`, 'left');
     });
     //Receiving the name of the user who left the chat system
     socket.on('left', name => {
