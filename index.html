@@ -133,6 +133,7 @@
 
    // getting the audio from images folder served as static to the server
     var audio = new Audio('masg-tone.mp3');
+    var audio2=new Audio('Facebook Chat Sound.mp3');
     //listening to the form submission
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -155,6 +156,9 @@
         if (position == 'left') {
 
             audio.play();
+        }
+        else{
+            audio2.play();
         }
     }
     //Asking the user's name through a prompt on 1st time joining
