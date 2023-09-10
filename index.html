@@ -103,7 +103,7 @@
 <body>
     
     <nav>
-        <img class="logo" src="logo.png" alt="">
+        <img class="logo" src="https://icons8.com/icon/outGJp6v2Y0y/communicate" alt="">
         <h1 class="header">BaatCheet</h1>
     </nav>
     <div class="container">
@@ -132,8 +132,8 @@
     const messageContainer = document.querySelector(".container");
 
    // getting the audio from images folder served as static to the server
-    var audio = new Audio('masg-tone.mp3');
-    var audio2=new Audio('Facebook Chat Sound.mp3');
+    var audio = new Audio('/images/ting.mp3.mp3');
+    
     //listening to the form submission
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -157,9 +157,7 @@
 
             audio.play();
         }
-        else{
-            audio2.play();
-        }
+        
     }
     //Asking the user's name through a prompt on 1st time joining
     const name = prompt("Enter your name to join");
